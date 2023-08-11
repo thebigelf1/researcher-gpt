@@ -20,7 +20,7 @@ from langchain.schema import SystemMessage
 
 load_dotenv()
 brwoserless_api_key = os.getenv("BROWSERLESS_API_KEY")
-X-API-KEY = os.getenv("X-API-KEY")
+xapikey = os.getenv("X-API-KEY")
 
 
 llm = ChatOpenAI(temperature = 0, model = "gpt-3.5-turbo-16k-0613")
@@ -154,7 +154,7 @@ def search(query):
     })
 
     headers = {
-    'X-API-KEY': X-API-KEY,
+    'X-API-KEY': xapikey,
     'Content-Type': 'application/json'
     }
 
